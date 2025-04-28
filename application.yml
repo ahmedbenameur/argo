@@ -9,7 +9,7 @@ spec:
   # Source: Your GitHub repo with Kubernetes manifests
   source:
     repoURL: https://github.com/ahmedbenameur/argo.git  # Your repo
-    targetRevision: main   # Branch (main/master)
+    targetRevision: master   # Branch (main/master)
     path: .               # Path to manifests (root of the repo)
     
     # If using Kustomize (uncomment if needed)
