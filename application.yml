@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-argo-app         # Name of the ArgoCD app
+  namespace: argocd         # Must deploy in the argocd namespace
+spec:
+  project: default          # Use the default project
+  
+  # Source: Your GitHub repo with Kubernetes manifests
+  source:
+    repoURL: https://github.com/ahmedbenameur/argo.git  # Your repo
+    targetRevision: main   # Branch (main/master)
+    path: .               # Path to manifests (root of the repo)
+    
+    # If using Kustomize (uncomment if needed)
+    # kustomize:
+    #   namePrefix: dev-   # Optional prefix for resources
+
+  # Destination: Cluster & namespace to deploy to
+  destination:
+    server: https://kubernetes.default.svc  # Same cluster as ArgoCD
+    namespace: myapp       # Namespace to deploy into (change if needed)
+
+  # Sync Policy (Auto-sync, self-healing, and pruning)
+  syncPolicy:
+    automated:
+      prune: true           # Delete old resources
+      selfHeal: true        # Auto-correct drift
+    syncOptions:
+      - CreateNamespace=true  # Auto-create namespace if missing
