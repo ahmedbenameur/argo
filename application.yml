@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: my-argo-app         # Name of the ArgoCD app
-  namespace: argocd         # Must deploy in the argocd namespace
+  namespace: argocd         # Must deploy in the argocd namespace 
 spec:
   project: default          # Use the default project
   
