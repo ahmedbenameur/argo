@@ -59,7 +59,7 @@ spec:
     - name: http
       port: 8080
       targetPort: 8080
-      nodePort: 32325
+      nodePort: 32327
     - name: https
       port: 9080
       targetPort: 9080
