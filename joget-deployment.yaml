@@ -5,7 +5,7 @@ metadata:
   labels: 
     app: joget
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: joget
@@ -24,7 +24,7 @@ spec:
         fsGroup: 0
       containers:
         - name: joget
-          image: motrabelsi10/joget-wevioo-k8s:latest
+          image: ahmedba77777/joget-wevioo-k8ss
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
