@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: joget
+  name: jogetv8
   labels: 
     app: joget
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: jogetv8
+      app: joget
   template:
     metadata:
       labels: 
