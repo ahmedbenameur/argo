@@ -24,7 +24,7 @@ spec:
         fsGroup: 0
       containers:
         - name: joget
-          image: ahmedba77777/joget-wevioo-k8ss
+          image: motrabelsi10/joget-wevioo-k8s:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
