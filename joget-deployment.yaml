@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jogetv8
+  name: joget
   labels: 
     app: joget
 spec:
